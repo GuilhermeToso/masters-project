@@ -1,0 +1,86 @@
+TESTES DA ATUALIZAÇÃO DOS PESOS
+===============================
+
+EQUAÇÃO:
+
+w_ij = w_ij + reforço - punição
+
+reforço = dw*e^(-gama*grau_interno)
+
+punição = dw*e^(-b*grau_de_entrada)
+
+Variáveis:
+---------
+
+w_ij = Força de Conexão entre o neurônio i e o neurônio j
+reforço = Reforço da força de conexão
+punição = Punição da força de conexão
+dw = Valor máximo de reforço/punição da força de conexão
+gamma = Termo de decamento da variável 'reforço'
+b = Termo de decaimento força de punição
+grau_de_entrada = Quantidade de conexões que entram no neurônio j, oriundos de grupos diferentes daquele que o neurônio i, o qual constitui a conexão w_ij, pertence.
+grau_interno = Quantidade de conexões existentes entre todos os neurônios do grupo c_k, o qual o neurônio i pertence. 
+
+
+Teste 1 - Variação do Grau de Entrada e Graus Interno
+-----------------------------------------------------
+
+0 <= grau_de_entrada <= 50
+100 <= grau_interno <= 1000
+
+w_ij = 0.45
+dw = 0.1
+gamma = 1
+b = 0.1
+
+RESULTADO:
+==========
+
+Se gamma e beta estão fixos, e se variar o grau interno num intervalo tal que:
+
+	gamma*grau_interno >= 20
+
+então a força de reforço não irá variar, pois ela irá saturar, já que e^(-x) tende a 0, se x tende a 20 e portanto dw*(1-0)-> dw.
+Desta forma, como gamma é 1 e o menor valor é 100, então 100*1 > 0 e portanto o reforço não irá variar em absolutamente nada.
+
+Já a punição é crescente devido ao aumento do grau_incidente, como esperado.
+
+
+Teste 2 - Variação do Grau de Entrada e de Alpha
+------------------------------------------------
+
+0 <= grau_de_entrada <= 50
+0.001 <= gamma <= 0.1
+
+w_ij = 0.45
+dw = 0.1
+b = 0.1
+grau_interno = 200
+
+RESULTADO:
+=========
+
+Quanto menor o valor de gamma, menor será o termo no exponencial e mais próximo de 1 o termo em exponencial estará, desta forma, menor será o reforço.
+Por isso o comportamento do reforço ser baixo, para baixos valores de gamma e o incremento da força de conexão w_ij ser menor.
+
+
+Teste 3 - Variação do Grau de Entrada e do Beta
+-----------------------------------------------
+
+0 <= grau_de_entrada <= 50
+0.1 <= b <= 10
+
+w_ij = 0.45
+dw = 0.1
+a = 1
+grau_interno = 500
+
+RESULTADO:
+==========
+
+Quanto maior o valor de beta, menor é a influência da punição sobre os pesos. Se beta for muito grande, a influência é tão pequena
+que o reforço ainda é maior e portanto o peso continua a crescer.
+
+Portanto, o beta representa a taxa de intensidade da punição.
+
+

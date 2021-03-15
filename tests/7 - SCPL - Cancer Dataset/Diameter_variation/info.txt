@@ -1,0 +1,26 @@
+Variação do Diâmetro - Análise do Breast Cancer Dataset
+
+
+Variação do Diâmetro
+
+6*std.max()/epochs ---------- > 6*std.max()
+
+epochs = 100
+
+Classificação de todos os Dados: 74/100 = 0.74
+Diâmetro encontrado: 16.4 
+Portanto: 16.4 = 0.74*6*std.max() ---- > std.max() = 3.69 ~~ 3.644 do primeiro Componente Principal
+erro = 0.0496
+step = 0.2186
+
+Coeficientes Polinomiais no ajuste de curva = [ 5.97838730e-07 -4.28798258e-04  7.76892632e-02  1.52334920e-01]
+
+
+Acurácia dos dados previstos em procentagem (%).
+             ____________________________
+	    |  	Malignant   |   Benign   |
+	    |---------------|------------|
+	    |     92.08     |    94.24   |
+	    |_______________|____________|	
+
+Origfinal: [92.07920792     94.23631124]

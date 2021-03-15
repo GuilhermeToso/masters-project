@@ -1,0 +1,26 @@
+Variação do Diâmetro - Análise do Iris Dataset
+
+
+Variação do Diâmetro
+
+6*std.max()/epochs ---------- > 6*std.max()
+
+epochs = 100
+
+Classificação de todos os Dados: 12/100 = 0.12
+Diâmetro encontrado: 1.372 cm 
+Portanto: 1.372 = 0.12*6*std.max() ---- > std.max() = 1.9056 ~~ 1.765 = std do Petal Length
+erro = 0.14056
+step = 0.1059
+
+Coeficientes Polinomiais no ajuste de curva = [ 1.49495029e-06 -2.57508550e-04  1.62097221e-02  6.98188557e-02]
+
+
+Acurácia dos dados previstos em procentagem (%).
+             _____________________________________________
+	    |  	Setosa   |   Virginica   |   Versicolor   |
+	    |------------|---------------|----------------|
+	    |    100	 |     91.11     |      97.78     |
+	    |____________|_______________|________________|	
+
+Origfinal: [100.          91.11111111  97.77777778]

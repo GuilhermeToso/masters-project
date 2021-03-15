@@ -1,0 +1,91 @@
+Teste 1 - Comportamento Exponencial
+
+
+Variar e^{-x}, com 0 <= x = 10.
+
+Resultado:
+	
+	X >= 6, faz e^{-x} tender a 0, portanto....
+
+-----------------------------------------------------
+
+Teste 2 - Comportamento da Probabilidade
+
+P = 1 - e^{-x}
+
+0 <= x <= 10
+
+Resultado:
+
+	x>=6, P tende a 1... Portanto:
+
+O valor de x deve estar entre 0 e 6
+--------------------------------------------------------
+Teste 3 - Comportamento do termo do reforço
+
+R_term = G_in*e^{-gamma*G_incident}
+
+R_term = Termo da probabilidade do reforço
+G_in = Grau interno
+gamma = Parâmetro de decaimento
+G_incident = Grau incidente
+
+Resultado:
+
+	Quanto maior G_incident e o gamma, mais próximo de 0 o valor de R_term se aproxima
+
+	No entanto, se gamma e G_incident for baixo, e G_in alto, maior fica R_term, e maior a chance de ultrapassar o valor de 6, portanto, maior a
+	probabilidade de reforço.
+
+-----------------------------------------------------------
+
+Teste 4 - Comportamento do reforço, punição e pesos
+	  Variando o grau interno e o grau incidente
+
+100<= grau_interno <= 1000
+0<= grau incidente <= 50
+beta = 3
+gamma = 0.5
+
+R_term = G_in*e^{-gamma*G_incident}
+P_term = beta*G_incident
+
+Resultado:
+	Quanto maior o valor do G_incidente, maior a punição e menor o valor de reforço, e se houver menos graus internos, mais rapidamente o reforço decai
+	E portanto, o peso decai.
+
+-----------------------------------------------------------
+
+Teste 5 - Comportamento do reforço, punição e pesos
+	  Variando o gamma e o grau incidente
+
+0.1<= gamma <= 3
+0 <= grau incidente <= 50
+
+grau_interno = 1000
+beta = 3
+
+R_term = G_in*e^{-gamma*G_incident}
+P_term = beta*G_incident
+
+Resultado:
+	Quanto maior o valor do G_incidente, maior a punição e menor o valor de reforço, e se houver maior valor de gamma, mais rapidamente o reforço decai
+	E portanto, o peso decai.
+
+-----------------------------------------------------------
+
+Teste 6 - Comportamento do reforço, punição e pesos
+	  Variando o beta e o grau incidente
+
+0.1<= gamma <= 3
+0 <= grau incidente <= 50
+
+grau_interno = 1000
+beta = 3
+
+R_term = G_in*e^{-gamma*G_incident}
+P_term = beta*G_incident
+
+Resultado:
+	Quanto maior o valor do G_incidente, maior a punição e menor o valor de reforço, e se houver maior valor de gamma, mais rapidamente o reforço decai
+	E portanto, o peso decai.
