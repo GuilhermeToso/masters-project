@@ -46,16 +46,20 @@ Also there is the neuron subdirectory that contains the biological neuron models
 first order differential equations. Proceedings of the Royal society of London. Series B.
 Biological sciences, 221(1222):87–102.</cite>
 <br>
+
 <cite>Lapicque, L. (1907). Recherches quantitatives sur l’excitation electrique des nerfs
 traitee comme une polarization. Journal de Physiologie et de Pathologie Generalej,
 9:620–635.</cite>
 <br>
+
 <cite>Rulkov, N. F. (2002). Modeling of spiking-bursting neural behavior using twodimensional
 map. Physical Review E, 65(4):041922.</cite>
 <br>
+
 <cite>Izhikevich, E. M. (2003). Simple model of spiking neurons. IEEE Transactions on
 neural networks, 14(6):1569–1572.</cite>
 <br>
+
 <cite>Courbage, M., Nekorkin, V., and Vdovin, L. (2007). Chaotic oscillations in a map-based
 model of neural activity. Chaos: An Interdisciplinary Journal of Nonlinear Science,
 17(4):043109.</cite>
