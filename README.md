@@ -7,13 +7,13 @@ The project is a research on the synchronization analysis of biological neuron m
 <h2> Project Tree </h2>
 
 <code>
-    masters-project
-    |
-    |---- data
-    |---- imgs
-    |---- nsc
-    |---- tests
-    
+    masters-project;
+    |;
+    |---- data;
+    |---- imgs;
+    |---- nsc;
+    |---- tests;
+
 </code>
 
 ---------------------------
