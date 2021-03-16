@@ -5,17 +5,16 @@ This repository contains the files of my master's research project in computatio
 The project is a research on the synchronization analysis of biological neuron models. The ideia is to analyze the possibility of trajectories segmentation by synchronizing a group of neurons with strong coupling force between each one and the dessynchronization of those by a weak coupling force. Finally, a proof of concept is created as a machine learning model of semi-supervised learning, thus representing samples with the same classification by a cluster of synchronized neurons, and the samples with different labels are dessynchronized.
 
 <h2> Project Tree </h2>
-
+<pre>
 <code>
-    masters-project <br>
-    |<br>
-    |---- data<br>
-    |---- imgs<br>
-    |---- nsc<br>
-    |---- tests<br>
-
+    masters-project 
+    |
+    |---- data
+    |---- imgs
+    |---- nsc
+    |---- tests
 </code>
-
+</pre>
 ---------------------------
 <h2>Example of Iris Dataset Classification</h2>
 
