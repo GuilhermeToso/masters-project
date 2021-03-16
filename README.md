@@ -36,4 +36,10 @@ Also there is the neuron subdirectory that contains the biological neuron models
 <img src="imgs/trajectories.png" width=70% height=70%>
 <img src="imgs/activity.png" width=70% height=70%>
 
+<h2>Bibliography</h2>
+--------------------
 <cite>Hodgkin, A. L., & Huxley, A. F. (1952). A quantitative description of membrane current and its application to conduction and excitation in nerve. The Journal of physiology, 117(4), 500-544.</cite>
+<br>
+<cite>Hindmarsh, J. L. and Rose, R. (1984). A model of neuronal bursting using three coupled
+first order differential equations. Proceedings of the Royal society of London. Series B.
+Biological sciences, 221(1222):87–102.</cite>
