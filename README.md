@@ -38,6 +38,8 @@ At this last folder (<b>11 - NSC Data Tests</b>), from the <b>tests</b> director
 
 The implementation of the NSC model is quite simple. Down below there is an example of the implementation, where you import the <b>NSC</b> class, then you instantiate it with some values as the <b>data</b> to be inserted (must be a Pandas DataFrame), the <b>target</b> name, <b>similarity</b> used (like euclidean distance), <b>model</b> to indicate the neuron model, <b>alpha</b>, <b>beta</b> and <b>gamma</b> are parameters used to adapt the coupling force. The <b>w_step</b> means the maximum/minimum value of the coupling force adaptation, <b>neighbors</b> are the maximum amountof connections a neuron can make, <b>search_expand</b> represents the speed at which the searchs' hypersphere grows. Finally, <b>print_info</b> and <b>print_steps</b>, prints the classified data and all the steps of the agorithm, respectively. 
 
+<p>Then we use the <b>preprocess_data</b> method to clean our dataset, and finally we fit the model to the dataset by inserting the number of <b>epochs</b> and the <b>data_dtype</b> respective to the similarity used, as this case is 'Euclidean', then the data must be the argument <b>NSC.numerical</b>, in case is a similarity for categorical data, then use the argument <b>NSC.categorical</b>, these arguments are pieces of the dataset <b>data</b> that were sliced by the <b>preprocess_data</b> method.</p>
+
 <pre>
     <code style="color:pink;">
     from nsc import NSC
@@ -46,10 +48,12 @@ The implementation of the NSC model is quite simple. Down below there is an exam
     iris = datasets.load_iris(as_frame=True).frame
     model = 'CNV' # CNV stands for Courbage-Nekorkin-Vdovin 
 
-    nc = NeuronGraph(data=data, target='target' ,similarity='Euclidean', model=model, alpha = 0.1, w_step = 0.2, time_step=1, print_info=False, print_steps=False, beta=2.0, gamma=1.5)
+    nc = NeuronGraph(data=data, target='target',similarity='Euclidean', model=model, alpha = 0.1, w_step = 0.2, time_step=1, print_info=False, print_steps=False, beta=2.0, gamma=1.5)
     nc.neighbors = 15
     nc.search_expand = 100
-    nc.preprocess_data(shuffle=False,not_null=10,standarlize=False)
+    nc.preprocess_data(shuffle=False,not_null=10, standarlize=False) # not_null arg selects 10 data points to be classified, and all others the target are set to null
+    nc.fit(epochs=1000, nc.numerical)
+    print(nc.score)
     </code>
 </pre>
 
